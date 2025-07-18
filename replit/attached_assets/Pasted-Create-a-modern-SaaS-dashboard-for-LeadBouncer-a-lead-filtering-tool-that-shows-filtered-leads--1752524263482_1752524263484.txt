@@ -1,0 +1,93 @@
+Create a modern SaaS dashboard for "LeadBouncer" - a lead filtering tool that shows filtered leads, blocking statistics, and lead management.
+
+DASHBOARD OVERVIEW:
+- Product: LeadBouncer dashboard for managing filtered leads
+- User: Service business owners managing form submissions
+- Purpose: View leads, toggle blocked/passed status, see filtering performance
+- Design: Clean, data-focused, professional SaaS aesthetic
+
+DESIGN REQUIREMENTS:
+- Modern dashboard UI with sidebar navigation
+- Light/dark mode toggle
+- Responsive design (desktop-first, mobile-friendly)
+- Data visualization with charts and metrics
+- Professional color scheme: Blue primary (#1e40af), green success (#10b981), red warning (#ef4444)
+- Clean typography with clear hierarchy
+
+LAYOUT STRUCTURE:
+- Left sidebar: Navigation menu (Dashboard, Forms, Settings, Billing)
+- Top header: User profile, notifications, dark mode toggle
+- Main content area: Dashboard metrics and lead table
+- Right sidebar: Quick actions and recent activity (optional)
+
+HEADER SECTION:
+- Top metrics cards (4 across):
+  1. "Total Leads This Month" - 247 with +12% trend
+  2. "Blocked Leads" - 89 (36%) with red indicator
+  3. "Passed Leads" - 158 (64%) with green indicator
+  4. "Time Saved" - 8.2 hours with clock icon
+- Date range selector (Last 7 days, 30 days, 90 days)
+- Filter buttons: All, Passed, Blocked, Review
+
+MAIN LEAD TABLE:
+- Columns: Status, Name, Email, Phone, Form, Score, Date, Actions
+- Status indicators: Green check (Passed), Red X (Blocked), Orange warning (Review)
+- Sortable columns with sort indicators
+- Pagination (10, 25, 50 per page)
+- Search bar above table
+- Bulk actions: Mark as passed/blocked, Export, Delete
+
+LEAD ROW DETAILS:
+- Toggle status with single click (blocked ↔ passed)
+- Hover effects showing lead score breakdown
+- Actions dropdown: View details, Contact, Delete
+- Color-coded rows: Green tint for passed, red tint for blocked
+- Expand row to show full message/form data
+
+FILTERING ANALYTICS:
+- Small chart showing leads over time (line chart)
+- Block reasons breakdown (pie chart or bar chart):
+  - Honeypot triggered: 34%
+  - Timing too fast: 28%
+  - Disposable email: 23%
+  - AI flagged: 15%
+- Recent blocking activity feed
+
+SIDEBAR NAVIGATION:
+- Dashboard (active)
+- Forms (with count badge)
+- Settings
+- Billing
+- Help & Support
+- User profile section at bottom
+
+TECHNICAL SPECS:
+- Use React with TypeScript
+- Tailwind CSS for styling
+- Shadcn/ui components for consistent design
+- Lucide React icons
+- Recharts for data visualization
+- Table with sorting, filtering, and pagination
+- Responsive grid layout
+
+INTERACTION PATTERNS:
+- Click status to toggle (with confirmation modal)
+- Hover effects on rows and buttons
+- Loading states for data fetching
+- Success/error toast notifications
+- Keyboard shortcuts (Ctrl+F for search)
+
+SAMPLE DATA:
+Include realistic sample data:
+- Mix of passed/blocked leads with realistic names/emails
+- Various form sources (Contact Form, Quote Request, etc.)
+- Different blocking reasons
+- Timestamps from last 30 days
+- Lead scores (1-100 scale)
+
+EMPTY STATES:
+- "No leads yet" state with setup instructions
+- "No results found" for filtered searches
+- Loading skeletons for data fetching
+
+Make this feel like a professional SaaS dashboard that busy business owners can quickly scan to understand their lead quality and take action on false positives.

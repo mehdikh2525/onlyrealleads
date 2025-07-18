@@ -1,0 +1,99 @@
+Create a modern, conversion-focused landing page for "LeadBouncer" - a lead filtering SaaS tool that automatically blocks fake form submissions for service businesses.
+
+BRAND & POSITIONING:
+- Product: LeadBouncer - AI-powered lead filtering
+- Target: Service businesses, contractors, agencies drowning in spam leads
+- Value prop: Stop wasting 5-10 hours weekly on fake leads, protect ad spend
+- Tone: Professional but approachable, problem-focused, results-driven
+
+DESIGN REQUIREMENTS:
+- Modern, clean aesthetic with subtle animations
+- Dark mode friendly with professional color scheme
+- Mobile-first responsive design
+- Fast loading, minimal dependencies
+- Trust-building elements (testimonials, security badges)
+- Clear visual hierarchy guiding to signup CTA
+
+HERO SECTION:
+- Headline: "Stop Wasting Hours on Fake Leads"
+- Subheadline: "LeadBouncer automatically filters out spam, bots, and fake inquiries before they hit your CRM. Save 5+ hours weekly and protect your ad spend."
+- Primary CTA: "Start Free Trial - $49/month"
+- Hero visual: Split-screen showing messy lead inbox vs clean filtered inbox
+- Social proof: "Trusted by 500+ service businesses"
+
+PROBLEM SECTION:
+- Title: "Every Service Business Faces This Problem"
+- 3 pain points with icons:
+  1. "Sorting through 'ArE yOu UsInG AI?' spam wastes 10+ hours weekly"
+  2. "Fake leads pollute your CRM and follow-up sequences"  
+  3. "You're paying $30+ per lead, then wasting time on fakes"
+- Visual: Screenshot of typical spam lead examples
+
+SOLUTION SECTION:
+- Title: "Your Invisible Lead Bouncer"
+- Subtitle: "Automatically blocks fake submissions before they waste your time"
+- 3 key features with icons:
+  1. "Instant Bot Detection - Honeypots, timing analysis, behavioral patterns"
+  2. "AI-Powered Filtering - Advanced spam detection using GPT-4"
+  3. "CRM Integration - Only clean leads reach HubSpot, Salesforce, etc."
+- Visual: Animated demo of form submission getting blocked
+
+HOW IT WORKS:
+- Title: "Set Up in 5 Minutes"
+- 3 steps with visuals:
+  1. "Add our code snippet to your forms"
+  2. "Connect your CRM or webhook"
+  3. "Watch fake leads get blocked automatically"
+- CTA: "See Live Demo"
+
+SOCIAL PROOF:
+- Customer testimonials (create 3 realistic ones):
+  1. "Saved 8 hours weekly sorting leads" - Mike, HVAC contractor
+  2. "Blocked 67% of fake submissions" - Sarah, Digital agency
+  3. "ROI positive from day one" - Tom, Roofing company
+- Logos of common integrations (HubSpot, Salesforce, WordPress)
+
+PRICING:
+- Title: "Simple, Transparent Pricing"
+- 3 tiers:
+  - Starter ($49/month): Up to 5 forms, basic filtering, email support
+  - Professional ($149/month): Unlimited forms, AI analysis, CRM integration  
+  - Enterprise ($499/month): Multi-client management, advanced analytics, priority support
+- All plans: "14-day free trial, cancel anytime"
+- Money-back guarantee badge
+
+FAQ SECTION:
+- "How accurate is the filtering?" - 95%+ accuracy with human review option
+- "Will it block real customers?" - Our AI is trained to avoid false positives
+- "What forms does it work with?" - Any HTML form (WordPress, Webflow, custom)
+- "How fast is setup?" - 5 minutes with our simple code snippet
+
+FINAL CTA:
+- Large section with: "Ready to Stop Wasting Time on Fake Leads?"
+- Primary CTA: "Start Free Trial"
+- Secondary: "Book a Demo"
+- Risk reversal: "No setup fees, cancel anytime"
+
+TECHNICAL SPECS:
+- Use React with TypeScript
+- Tailwind CSS for styling
+- Framer Motion for animations
+- Responsive breakpoints: mobile (320px+), tablet (768px+), desktop (1024px+)
+- Optimize for Core Web Vitals
+- Include proper meta tags for SEO
+
+VISUAL STYLE:
+- Color scheme: Deep blue primary (#1e40af), orange accent (#f97316), neutral grays
+- Typography: Modern sans-serif (Inter or similar)
+- Subtle gradients and shadows
+- Generous whitespace
+- Professional illustrations or clean iconography
+- Hover effects on buttons and cards
+
+CTA STYLING:
+- Primary button: Bold, contrasting color with hover animation
+- Secondary button: Outline style
+- Sticky header with CTA for desktop
+- Multiple CTAs throughout page (every 2-3 sections)
+
+Make this feel like a premium SaaS product that serious business owners would trust with their lead generation. Focus on conversion optimization and clear value communication.

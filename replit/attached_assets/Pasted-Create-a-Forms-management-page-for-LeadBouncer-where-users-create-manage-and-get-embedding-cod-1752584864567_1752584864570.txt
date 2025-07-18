@@ -1,0 +1,137 @@
+Create a Forms management page for "LeadBouncer" - where users create, manage, and get embedding code for their protected forms.
+
+PAGE PURPOSE:
+- Product: LeadBouncer forms management interface
+- User: Service business owners setting up form protection
+- Goal: Create forms, generate embed codes, manage form settings
+- Design: Clean, workflow-focused, developer-friendly
+
+DESIGN REQUIREMENTS:
+- Consistent with dashboard design system
+- Focus on ease of use and code generation
+- Professional SaaS aesthetic
+- Mobile-responsive layout
+- Clear visual hierarchy for technical information
+
+LAYOUT STRUCTURE:
+- Same sidebar navigation as dashboard
+- Main content area with forms list and creation flow
+- Modal overlays for form creation and code generation
+- Breadcrumb navigation: Dashboard > Forms
+
+PAGE HEADER:
+- Title: "Protected Forms"
+- Subtitle: "Manage your forms and generate embedding code"
+- Primary CTA: "Add New Form" button (prominent)
+- Search bar for filtering forms
+- Filter tabs: All Forms, Active, Inactive
+
+FORMS LIST VIEW:
+- Card-based layout (3-4 cards per row on desktop)
+- Each form card shows:
+  - Form name and description
+  - Status indicator (Active/Inactive toggle)
+  - Lead statistics: "127 leads, 89 passed, 38 blocked"
+  - Last activity: "2 hours ago"
+  - Actions: Edit, Get Code, View Analytics, Delete
+- Empty state: "No forms yet. Create your first protected form."
+
+FORM CARD DETAILS:
+- Form name (editable inline)
+- Form URL/domain where it's embedded
+- Protection level indicator (Basic, Advanced, AI-Powered)
+- Success rate: "72% of leads pass filtering"
+- Quick stats bar showing passed vs blocked ratio
+- Status toggle with immediate save
+
+ADD NEW FORM MODAL:
+- Modal title: "Create New Protected Form"
+- Form fields:
+  - Form Name (required): "Contact Form"
+  - Description (optional): "Main website contact form"
+  - Website URL: "https://example.com"
+  - Protection Level: Dropdown (Basic, Advanced, AI-Powered)
+  - CRM Integration: Dropdown (None, HubSpot, Salesforce, Webhook)
+- CTA buttons: "Create Form" (primary), "Cancel" (secondary)
+
+CODE GENERATION INTERFACE:
+- Modal title: "Embed Code for [Form Name]"
+- Tabs: "JavaScript Snippet", "WordPress Plugin", "HTML Form"
+- JavaScript snippet:
+  ```html
+  <script>
+  (function(){
+    var script = document.createElement('script');
+    script.src = 'https://leadbouncer.com/js/leadbouncer.js';
+    script.onload = function(){
+      LeadBouncer.init('form_abc123xyz');
+    };
+    document.head.appendChild(script);
+  })();
+  </script>
+
+Copy button with success animation
+Installation instructions with numbered steps
+Testing section: "Test your form" with validation
+
+FORM SETTINGS PANEL:
+
+Accessible via "Edit" button on form card
+Sections:
+
+Basic Settings: Name, description, URL
+Protection Rules: Toggle honeypot, timing, AI analysis
+Notifications: Email alerts for new leads
+CRM Integration: Connect to HubSpot/Salesforce
+Advanced: Custom blocking rules, whitelist domains
+
+
+
+ANALYTICS PREVIEW:
+
+Mini charts on each form card
+Click to expand detailed analytics
+Metrics: Submission rate, block rate, top blocking reasons
+Time-based filtering: Last 7 days, 30 days
+
+INTEGRATION STATUS:
+
+Visual indicators for CRM connection status
+"Connected to HubSpot" with green checkmark
+"Setup Required" with warning icon
+Quick setup buttons for popular integrations
+
+TECHNICAL SPECS:
+
+Use React with TypeScript
+Tailwind CSS with Shadcn/ui components
+Code syntax highlighting (Prism.js or similar)
+Copy-to-clipboard functionality
+Modal state management
+Form validation with error states
+Drag-and-drop for form reordering
+
+SAMPLE CONTENT:
+Include realistic sample forms:
+
+"Contact Form" - Main website contact
+"Quote Request" - Service quote form
+"Newsletter Signup" - Email collection
+"Free Consultation" - Lead magnet form
+
+INTERACTION PATTERNS:
+
+Hover effects on form cards
+Smooth modal transitions
+Loading states for code generation
+Success animations for actions
+Keyboard shortcuts (Esc to close modals)
+
+HELP & GUIDANCE:
+
+Tooltips explaining protection levels
+"Getting Started" guide for first-time users
+"Need Help?" chat widget
+Documentation links for technical setup
+
+Make this feel like a developer-friendly tool that non-technical users can still navigate easily. Focus on making the code generation and form setup process as smooth as possible.
