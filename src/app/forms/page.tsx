@@ -562,13 +562,13 @@ export default function FormsPage() {
             </TabsList>
             <TabsContent value="javascript" className="space-y-4">
               <Label>JavaScript Snippet</Label>
-              <div className="relative">
+              <div className="relative w-full">
                 <div className="bg-slate-900 p-4 rounded-lg overflow-x-auto text-sm">
                   <pre className="text-slate-100">
                     <code>{selectedForm ? generateSnippet(selectedForm) : ""}</code>
                   </pre>
                 </div>
-                <Button size="sm" className="absolute top-2 right-2" onClick={() => {
+                <Button size="sm" className="absolute top-3 right-3" onClick={() => {
                   if (!selectedForm) return
                   navigator.clipboard.writeText(generateSnippet(selectedForm))
                   setCopied(true)
