@@ -563,8 +563,8 @@ export default function FormsPage() {
             <TabsContent value="javascript" className="space-y-4">
               <Label>JavaScript Snippet</Label>
               <div className="relative w-full">
-                <div className="bg-slate-900 p-4 rounded-lg overflow-x-auto text-sm">
-                  <pre className="text-slate-100">
+                <div className="bg-slate-900 p-4 rounded-lg overflow-x-auto text-sm max-w-full">
+                  <pre className="text-slate-100 whitespace-pre-wrap break-all">
                     <code>{selectedForm ? generateSnippet(selectedForm) : ""}</code>
                   </pre>
                 </div>
