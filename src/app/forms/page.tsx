@@ -564,7 +564,7 @@ export default function FormsPage() {
               <Label>JavaScript Snippet</Label>
               <div className="relative w-full">
                 <div className="bg-slate-900 p-4 rounded-lg overflow-x-auto text-sm max-w-full">
-                  <pre className="text-slate-100 whitespace-pre-wrap break-all">
+                  <pre className="text-slate-100 whitespace-pre-wrap break-all w-full">
                     <code>{selectedForm ? generateSnippet(selectedForm) : ""}</code>
                   </pre>
                 </div>
