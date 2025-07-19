@@ -181,6 +181,14 @@ export default function FormsPage() {
     }
     try {
       setCreating(true)
+
+      // Ensure a customers row exists for the logged-in user (FK + RLS requirement)
+      if (user) {
+        await supabase
+          .from("customers")
+          .upsert({ id: user.id, email: user.email ?? "" }, { onConflict: "id" })
+      }
+
       const { data, error } = await supabase
         .from("forms")
         .insert({
@@ -189,7 +197,10 @@ export default function FormsPage() {
         })
         .select()
         .single()
-      if (error) throw error
+      if (error) {
+        console.error('Supabase insert error:', error)
+        throw error
+      }
       // append
       const newForm: UiForm = {
         ...data,
@@ -233,9 +244,27 @@ export default function FormsPage() {
   })
 
   // util: embed code same as previous page
+  // Generates the copy-paste snippet for the “Get Code” modal
   function generateSnippet(form: UiForm) {
-    const currentDomain = typeof window !== "undefined" ? window.location.origin : "https://your-domain.com"
-    return ""
+    // Prefer build-time env vars but fall back to current origin on the client
+    const baseUrl = process.env.NEXT_PUBLIC_SNIPPET_URL || (typeof window !== "undefined" ? window.location.origin : "")
+    const validateUrl = process.env.NEXT_PUBLIC_VALIDATE_URL || ""
+    const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON || ""
+
+    const scriptSrc = `${baseUrl.replace(/\/$/, "")}/leadbouncer.js`
+
+    return `<!-- LeadBouncer -->\n` +
+      `<script src="${scriptSrc}" defer></script>\n` +
+      `<script>\n` +
+      `  document.addEventListener('DOMContentLoaded', function () {\n` +
+      `    LeadBouncer.init('form', {\n` +
+      `      formId: '${form.id}',\n` +
+      `      customerId: '${(form as any).customer_id ?? ""}',\n` +
+      `      apiUrl: '${validateUrl}',\n` +
+      `      anonKey: '${anonKey}',\n` +
+      `    });\n` +
+      `  });\n` +
+      `</script>`
   }
 
   // ui helpers
