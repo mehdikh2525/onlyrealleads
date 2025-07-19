@@ -160,7 +160,7 @@ export default function DashboardPage() {
   // filtered + paginated leads
   const filteredLeads = leads.filter((lead) => {
     const matchSearch = lead.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      lead.email.toLowerCase().includes(searchTerm.toLowerCase())
+      (lead.email ?? "").toLowerCase().includes(searchTerm.toLowerCase())
     const matchStatus = statusFilter === "all" || lead.status === statusFilter
     return matchSearch && matchStatus
   })
