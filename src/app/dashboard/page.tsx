@@ -228,7 +228,7 @@ export default function DashboardPage() {
             )}
             <div>
               <h2 className="text-xl md:text-2xl font-bold">Dashboard</h2>
-              <p className="text-muted-foreground text-sm md:text-base">Welcome back, {user.email}</p>
+              <p className="text-muted-foreground text-sm md:text-base">Welcome back, {user?.email ?? ""}</p>
             </div>
           </div>
 
